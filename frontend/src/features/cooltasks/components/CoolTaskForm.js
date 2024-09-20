@@ -1,7 +1,7 @@
 import React from 'react'
 
 function CoolTaskForm() {
-    return <div>CoolTaskForm-1</div>
+    return <div>CoolTaskForm</div>
 }
 
 export default CoolTaskForm
