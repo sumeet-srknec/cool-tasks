@@ -29,7 +29,7 @@ jobs:
       - uses: ./.github/workflows/actions
       - name: Run Maven Build Command
         run: mvn clean install -DskipTests
-        working-directory: frontend
+        working-directory: backend
       - name: OWASP Dependency Check
         uses: dependency-check/Dependency-Check_Action@main
         env:
