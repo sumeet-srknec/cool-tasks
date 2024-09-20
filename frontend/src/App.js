@@ -2,6 +2,8 @@
 import React from 'react'
 import TaskForm from './features/tasks/components/TaskForm'
 import TaskList from './features/tasks/components/TaskList'
+import CoolTaskForm from './features/cooltasks/components/CoolTaskForm'
+import CoolTaskList from './features/cooltasks/components/CoolTaskList'
 
 function App() {
     return (
@@ -9,6 +11,9 @@ function App() {
             <h1 className="text-3xl font-bold mb-4 text-center">Task Management App</h1>
             <TaskForm />
             <TaskList />
+            <h1 className="text-3xl font-bold mt-4 border-t-4 mb-4 text-center">Cool Task Management App</h1>
+            <CoolTaskForm />
+            <CoolTaskList />
         </div>
     )
 }

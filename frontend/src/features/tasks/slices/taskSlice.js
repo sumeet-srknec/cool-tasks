@@ -57,5 +57,4 @@ const taskSlice = createSlice({
 })
 
 export const selectAllTasks = (state) => state.tasks.tasks
-
 export default taskSlice.reducer
