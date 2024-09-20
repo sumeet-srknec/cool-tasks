@@ -17,7 +17,7 @@ export const addCoolTask = createAsyncThunk('coolTasks/addCoolTask', async (task
     return response
 })
 
-export const editCoolTask = createAsyncThunk('coolTasks/editCoolTask', async (id, task) => {
+export const editCoolTask = createAsyncThunk('coolTasks/editCoolTask', async ({ id, task }) => {
     const response = await updateCoolTask(id, task)
     return response
 })
