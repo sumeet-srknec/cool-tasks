@@ -2,13 +2,13 @@ name: frontend service ci
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - "frontend/**"
       - ".github/workflows/actions/action.yaml"
       - ".github/workflows/frontend-ci.yaml"
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
     paths:
       - "frontend/**"
       - ".github/workflows/actions/action.yaml"
@@ -19,7 +19,7 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     env:
-      FROM_ORIGINAL_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name == github.repository || github.ref == 'refs/heads/main' }}
+      FROM_ORIGINAL_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name == github.repository || github.ref == 'refs/heads/master' }}
     steps:
       - uses: actions/checkout@v4
         with:
