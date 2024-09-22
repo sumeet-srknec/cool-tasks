@@ -13,7 +13,7 @@
 	<artifactId>cool-tasks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>cool-tasks</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Yet another todo list</description>
 	<url/>
 	<licenses>
 		<license/>
