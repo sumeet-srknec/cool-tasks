@@ -2,7 +2,11 @@ const API_URL = '/api/tasks'
 
 export const getCoolTasks = async () => {
     const response = await fetch(API_URL)
-    return await response.json()
+    if (response.ok) {
+        return await response.json()
+    } else {
+        throw new Error('Failed to fetch tasks')
+    }
 }
 
 export const createCoolTask = async (task) => {
@@ -14,7 +18,11 @@ export const createCoolTask = async (task) => {
         body: JSON.stringify(task)
     })
 
-    return await response.json()
+    if (response.ok) {
+        return await response.json()
+    } else {
+        throw new Error('Failed to create task')
+    }
 }
 
 export const updateCoolTask = async (id, task) => {

@@ -39,7 +39,15 @@ const taskSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchTasks.fulfilled, (state, action) => {
+                state.status = 'succeeded'
                 state.tasks = action.payload
+            })
+            .addCase(fetchTasks.pending, (state, action) => {
+                state.status = 'loading'
+            })
+            .addCase(fetchTasks.rejected, (state, action) => {
+                state.status = 'failed'
+                state.error = 'API Error'
             })
             .addCase(addTask.fulfilled, (state, action) => {
                 state.tasks.push(action.payload)
