@@ -41,9 +41,8 @@ jobs:
 
       # Step 5: Upload test results (optional, if you want test reports)
       - name: Upload test results
-        working-directory: frontend
         if: always()
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: test-results
+          path: frontend/test-results/jest-junit.xml
