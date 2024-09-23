@@ -33,8 +33,16 @@ const coolTaskSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
+            .addCase(fetchCoolTasks.pending, (state, action) => {
+                state.status = 'loading'
+            })
             .addCase(fetchCoolTasks.fulfilled, (state, action) => {
+                state.status = 'succeeded'
                 state.coolTasks = action.payload
+            })
+            .addCase(fetchCoolTasks.rejected, (state, action) => {
+                state.status = 'failed'
+                state.error = 'API Error'
             })
             .addCase(addCoolTask.fulfilled, (state, action) => {
                 state.coolTasks.push(action.payload)

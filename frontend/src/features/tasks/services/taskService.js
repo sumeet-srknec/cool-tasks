@@ -3,7 +3,11 @@ const API_URL = '/api/tasks'
 
 export const getTasks = async () => {
     const response = await fetch(API_URL)
-    return await response.json()
+    if (response.ok) {
+        return await response.json()
+    } else {
+        throw new Error('Failed to fetch tasks')
+    }
 }
 
 export const createTask = async (task) => {
@@ -14,7 +18,12 @@ export const createTask = async (task) => {
         },
         body: JSON.stringify(task)
     })
-    return await response.json()
+
+    if (response.ok) {
+        return await response.json()
+    } else {
+        throw new Error('Failed to create task')
+    }
 }
 
 export const updateTask = async (id, task) => {
