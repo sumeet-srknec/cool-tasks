@@ -36,13 +36,5 @@ jobs:
       
       # Step 4: Run tests
       - name: Run tests
-        run: npm test -- --watchAll=false
+        run: npm test -- --watchAll=false --verbose
         working-directory: frontend
-
-      # Step 5: Upload test results (optional, if you want test reports)
-      - name: Upload test results
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-results
-          path: frontend/test-results/jest-junit.xml
