@@ -12,7 +12,7 @@ function App() {
             <TaskForm />
             <TaskList />
             <p>This is a sample code to highlight options needed to refresh item list</p>
-            <h1 className="text-3xl font-bold mt-4 border-t-4 mb-4 text-center">Cool Task Management App</h1>
+            <h1 className="text-3xl rounded-lg font-bold mt-4 border-t-4 mb-4 text-center">Cool Task Management App</h1>
             <CoolTaskForm />
             <CoolTaskList />
         </div>
