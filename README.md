@@ -4,3 +4,5 @@ New project to learn
 - best of BFF pattern, security, swagger
 - github workflows for Java and React projects
 - UI unit tests & integration with workflow
+
+- ###README Formatting
