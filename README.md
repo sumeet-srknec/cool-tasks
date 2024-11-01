@@ -6,3 +6,4 @@ New project to learn
 - UI unit tests & integration with workflow
 - ###README Formatting
 - adding snapshots to README
+- issue reporting and project tracking 
